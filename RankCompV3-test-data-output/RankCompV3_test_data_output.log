@@ -1,56 +1,25 @@
 [ Info: INFO: Comparsion is peformed between group1 and group2
-[ Info: INFO: size of the loaded expression matrix for the two groups, 16381 x 4 vs 4
-[ Info: INFO: size after filtering lowly expressed genes and profiles and pseudo-bulk sampling, (14489, 4) vs. (14489, 4)
+[ Info: INFO: size of the loaded expression matrix for the two groups, 20000 x 5 vs 5
+[ Info: INFO: size after filtering lowly expressed genes and profiles and pseudo-bulk sampling, (19999, 5) vs. (19999, 5)
+[ Info: WARN: only 0 house-keeping genes are available, we just ignore this.
 [ Info: WARN: even if all samples have the identical REOs, it still cannot reach the required significance, 0.01.
-[ Info:       The max significance level is 0.125.
+[ Info:       The max significance level is 0.0625.
 [ Info: WARN: even if all samples have the identical REOs, it still cannot reach the required significance, 0.01.
-[ Info:       The max significance level is 0.125.
-[ Info: Minimum size for significantly stable REO in the control group: 4
-[ Info: Minimum size for significantly stable REO in the treatment group: 4
-[ Info: INFO: Number of execution threads: 10                                                                                                                              [162/624]
- 19.051210 seconds (497.90 M allocations: 31.016 GiB, 63.15% gc time, 13.86% compilation time)
-[ Info: INFO: iteration 0,  # DEGs 448, # non-DEGs 14041
-[ Info: INFO: Number of execution threads: 10
- 75.442567 seconds (2.24 G allocations: 138.417 GiB, 73.22% gc time)
-[ Info: INFO: iteration 1,  # DEGs 443, # non-DEGs 14046
-[ Info: INFO: Number of execution threads: 10
- 75.558898 seconds (2.24 G allocations: 138.466 GiB, 73.30% gc time)
-[ Info: INFO: iteration 2,  # DEGs 442, # non-DEGs 14047
-┌ Warning: seriestype density has been moved to StatsPlots.  To use: `Pkg.add("StatsPlots"); using StatsPlots`
-└ @ Plots ~/.julia/packages/Plots/PomtQ/src/args.jl:1576
-┌ Warning: seriestype density has been moved to StatsPlots.  To use: `Pkg.add("StatsPlots"); using StatsPlots`
-└ @ Plots ~/.julia/packages/Plots/PomtQ/src/args.jl:1576
-┌ Warning: seriestype density has been moved to StatsPlots.  To use: `Pkg.add("StatsPlots"); using StatsPlots`
-└ @ Plots ~/.julia/packages/Plots/PomtQ/src/args.jl:1576
-GKS: cannot open display - headless operation mode active
-┌ Warning: seriestype density has been moved to StatsPlots.  To use: `Pkg.add("StatsPlots"); using StatsPlots`
-└ @ Plots ~/.julia/packages/Plots/PomtQ/src/args.jl:1576
-┌ Warning: seriestype density has been moved to StatsPlots.  To use: `Pkg.add("StatsPlots"); using StatsPlots`
-└ @ Plots ~/.julia/packages/Plots/PomtQ/src/args.jl:1576
-┌ Warning: seriestype density has been moved to StatsPlots.  To use: `Pkg.add("StatsPlots"); using StatsPlots`
-└ @ Plots ~/.julia/packages/Plots/PomtQ/src/args.jl:1576
-┌ Warning: seriestype density has been moved to StatsPlots.  To use: `Pkg.add("StatsPlots"); using StatsPlots`
-└ @ Plots ~/.julia/packages/Plots/PomtQ/src/args.jl:1576
-┌ Warning: seriestype density has been moved to StatsPlots.  To use: `Pkg.add("StatsPlots"); using StatsPlots`
-└ @ Plots ~/.julia/packages/Plots/PomtQ/src/args.jl:1576
-┌ Warning: seriestype density has been moved to StatsPlots.  To use: `Pkg.add("StatsPlots"); using StatsPlots`
-└ @ Plots ~/.julia/packages/Plots/PomtQ/src/args.jl:1576
-┌ Warning: seriestype density has been moved to StatsPlots.  To use: `Pkg.add("StatsPlots"); using StatsPlots`
-└ @ Plots ~/.julia/packages/Plots/PomtQ/src/args.jl:1576
-┌ Warning: seriestype density has been moved to StatsPlots.  To use: `Pkg.add("StatsPlots"); using StatsPlots`
-└ @ Plots ~/.julia/packages/Plots/PomtQ/src/args.jl:1576
-┌ Warning: seriestype density has been moved to StatsPlots.  To use: `Pkg.add("StatsPlots"); using StatsPlots`
-└ @ Plots ~/.julia/packages/Plots/PomtQ/src/args.jl:1576
-┌ Warning: seriestype density has been moved to StatsPlots.  To use: `Pkg.add("StatsPlots"); using StatsPlots`
-└ @ Plots ~/.julia/packages/Plots/PomtQ/src/args.jl:1576
-┌ Warning: seriestype density has been moved to StatsPlots.  To use: `Pkg.add("StatsPlots"); using StatsPlots`
-└ @ Plots ~/.julia/packages/Plots/PomtQ/src/args.jl:1576
-┌ Warning: seriestype density has been moved to StatsPlots.  To use: `Pkg.add("StatsPlots"); using StatsPlots`
-└ @ Plots ~/.julia/packages/Plots/PomtQ/src/args.jl:1576
-┌ Warning: seriestype density has been moved to StatsPlots.  To use: `Pkg.add("StatsPlots"); using StatsPlots`
-└ @ Plots ~/.julia/packages/Plots/PomtQ/src/args.jl:1576
-┌ Warning: seriestype density has been moved to StatsPlots.  To use: `Pkg.add("StatsPlots"); using StatsPlots`
-└ @ Plots ~/.julia/packages/Plots/PomtQ/src/args.jl:1576                                                                                                                   [121/624]
+[ Info:       The max significance level is 0.0625.
+[ Info: Minimum size for significantly stable REO in the control group: 5
+[ Info: Minimum size for significantly stable REO in the treatment group: 5
+[ Info: INFO: Number of execution threads: 1
+ 47.591413 seconds (667.63 M allocations: 40.744 GiB, 19.52% gc time, 5.54% compilation time)
+[ Info: INFO: iteration 0,  # DEGs 886, # non-DEGs 19113
+[ Info: INFO: Number of execution threads: 1
+277.110699 seconds (4.21 G allocations: 259.835 GiB, 19.00% gc time)
+[ Info: INFO: iteration 1,  # DEGs 913, # non-DEGs 19086
+[ Info: INFO: Number of execution threads: 1
+277.760415 seconds (4.20 G allocations: 259.470 GiB, 19.13% gc time)
+[ Info: INFO: iteration 2,  # DEGs 936, # non-DEGs 19063
+[ Info: INFO: Number of execution threads: 1
+278.441807 seconds (4.20 G allocations: 259.157 GiB, 19.09% gc time)
+[ Info: INFO: iteration 3,  # DEGs 933, # non-DEGs 19066
 ┌ Warning: seriestype density has been moved to StatsPlots.  To use: `Pkg.add("StatsPlots"); using StatsPlots`
 └ @ Plots ~/.julia/packages/Plots/PomtQ/src/args.jl:1576
 ┌ Warning: seriestype density has been moved to StatsPlots.  To use: `Pkg.add("StatsPlots"); using StatsPlots`
@@ -75,123 +44,143 @@ GKS: cannot open display - headless operation mode active
 └ @ Plots ~/.julia/packages/Plots/PomtQ/src/args.jl:1576
 ┌ Warning: seriestype density has been moved to StatsPlots.  To use: `Pkg.add("StatsPlots"); using StatsPlots`
 └ @ Plots ~/.julia/packages/Plots/PomtQ/src/args.jl:1576
-(14489×16 DataFrame
-   Row │ Name             pval        padj       n11      n12      n13      n21      n22      n23      n31      n32      n33      Δ1           Δ2           se         z1          ⋯
-       │ String           Float64     Float64    Float64  Float64  Float64  Float64  Float64  Float64  Float64  Float64  Float64  Float64      Float64      Float64    Float64     ⋯
-───────┼────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
-     1 │ ENSG00000237683  0.85706     0.967732    8334.0    296.0      2.0    146.0    619.0    175.0      2.0    211.0   4260.0  -0.286614    -0.274384    0.0701821   -4.08386   ⋯
-     2 │ ENSG00000187634  0.771573    0.946462    9926.0    162.0      0.0    459.0   1359.0    402.0      2.0    406.0   1329.0   0.461972     0.431796    0.054213     8.52143
-     3 │ ENSG00000188976  0.0109186   0.171397     870.0      2.0      0.0    300.0    398.0     10.0      0.0    275.0  12190.0   4.05022      3.82951     0.182425    22.2021
-     4 │ ENSG00000187961  0.74693     0.942707    7907.0    136.0      0.0    209.0    753.0    163.0      1.0    289.0   4587.0   0.513483     0.513515    0.0731412    7.02044
-     5 │ ENSG00000187583  0.796378    0.952079   10256.0    432.0      1.0    217.0   2182.0    434.0      1.0    360.0    162.0  -0.410605    -0.404533    0.0537318   -7.64175   ⋯
-     6 │ ENSG00000187642  0.718454    0.935449   11026.0    303.0      2.0    394.0   1808.0    122.0      3.0    347.0     40.0   0.57369      0.553489    0.0608503    9.4279
-     7 │ ENSG00000188290  0.793       0.951638   11254.0    448.0      8.0    308.0   1848.0    108.0      4.0     60.0      7.0  -0.417574    -0.417379    0.0671783   -6.2159
-     8 │ ENSG00000187608  0.910369    0.981167    2463.0    214.0      0.0    195.0    655.0    170.0      0.0    126.0  10222.0  -0.179132    -0.178946    0.0756256   -2.36868
-     9 │ ENSG00000188157  0.00217817  0.0631191   3999.0    569.0     91.0      4.0    322.0   1084.0      0.0      9.0   7968.0  -4.87689     -4.90548     0.128781   -37.8697    ⋯
-    10 │ ENSG00000237330  0.669605    0.92655    10978.0    441.0      9.0    269.0   1847.0    339.0      3.0    132.0     27.0  -0.678974    -0.671807    0.0614138  -11.0557
-    11 │ ENSG00000131591  0.482893    0.856722    7176.0     70.0      0.0    579.0    877.0    242.0      0.0    133.0   4968.0   1.11652      0.824175    0.0696177   16.0379
-    12 │ ENSG00000162571  0.997848    1.0         9395.0    202.0      0.0    195.0    735.0    264.0      1.0    271.0   2982.0   0.00429275   0.00428757  0.0655122    0.0655259
-    13 │ ENSG00000186891  0.0016477   0.0523544   9942.0   1176.0     82.0      7.0    708.0   1942.0      0.0     14.0    174.0  -5.00821     -5.0259      0.0962748  -52.02      ⋯
-    14 │ ENSG00000186827  0.795119    0.952017   11480.0    558.0     11.0    394.0   1516.0     60.0      2.0     24.0      0.0  -0.413202    -0.409965    0.0633818   -6.51925
-    15 │ ENSG00000078808  0.306748    0.758263    5741.0     74.0      0.0    539.0    701.0     90.0      4.0    222.0   6674.0   1.62638      1.54439     0.0839214   19.3798
-    16 │ ENSG00000176022  0.226074    0.688728    6374.0     83.0      0.0    316.0    718.0     47.0      3.0    497.0   6007.0   1.92627      1.83779     0.0894409   21.5368
-    17 │ ENSG00000184163  0.849146    0.965122   10147.0    319.0      0.0    237.0   1105.0    293.0      2.0    577.0   1365.0   0.302671     0.29022     0.0535414    5.65303   ⋯
-   ⋮   │        ⋮             ⋮           ⋮         ⋮        ⋮        ⋮        ⋮        ⋮        ⋮        ⋮        ⋮        ⋮          ⋮            ⋮           ⋮           ⋮      ⋱
- 14473 │ ENSG00000124678  0.645728    0.919157   10709.0    191.0      0.0    358.0   2508.0     76.0      1.0    194.0      8.0   0.731511     0.728819    0.0743971    9.83251
- 14474 │ ENSG00000146197  0.238967    0.700979    8489.0    102.0      0.0    440.0    816.0     65.0      1.0    597.0   3535.0   1.87382      1.82557     0.0785137   23.8662
- 14475 │ ENSG00000065029  0.069297    0.427937    3696.0     25.0      0.0    603.0    670.0     43.0      1.0    596.0   8411.0   2.89049      2.86448     0.0984491   29.3602
- 14476 │ ENSG00000023892  0.42681     0.834094    8269.0    436.0      8.0    113.0    631.0    295.0      1.0     96.0   4196.0  -1.26451     -1.26283     0.0771489  -16.3906    ⋯
- 14477 │ ENSG00000112033  0.00181198  0.0554564   6127.0      6.0      0.0   1024.0    401.0      6.0     32.0    750.0   5699.0   4.96383      4.99038     0.126846    39.1328
- 14478 │ ENSG00000112039  0.174948    0.631675    5292.0    332.0      4.0    103.0    607.0    753.0      0.0     51.0   6903.0  -2.1585      -1.95844     0.081585   -26.4571
- 14479 │ ENSG00000198755  0.224224    0.688647     188.0     41.0      0.0      3.0     61.0     40.0      0.0      9.0  13703.0  -1.93397     -1.87487     0.286388    -6.75297
- 14480 │ ENSG00000007866  0.0596283   0.400907    5242.0    353.0     17.0     63.0    467.0    970.0      0.0     29.0   6904.0  -2.99719     -2.69557     0.0925365  -32.3892    ⋯
- 14481 │ ENSG00000112041  0.00329527  0.0837634   7391.0   1098.0     58.0      4.0    462.0    467.0      0.0     33.0   4532.0  -4.67633     -3.83583     0.117652   -39.7471
- 14482 │ ENSG00000096060  0.608844    0.901537    1734.0     49.0      1.0    139.0    311.0     83.0      0.0    163.0  11565.0   0.814286     0.810399    0.103619     7.85847
- 14483 │ ENSG00000157343  0.397101    0.818944    9465.0    123.0      0.0    350.0   1320.0    180.0      4.0    796.0   1807.0   1.3475       1.33646     0.0632714   21.2971
- 14484 │ ENSG00000196748  0.800938    0.953867    8866.0    182.0      0.0    375.0    903.0    229.0      2.0    228.0   3260.0   0.401209     0.389681    0.0640231    6.26663   ⋯
- 14485 │ ENSG00000204140  0.0704334   0.430051   10800.0   1186.0     67.0     68.0   1549.0    345.0      0.0     25.0      5.0  -2.87877     -2.88191     0.0866762  -33.2129
- 14486 │ ENSG00000197753  0.772698    0.946462   10599.0    585.0      2.0    149.0   2127.0    164.0      0.0    368.0     51.0  -0.459631    -0.376225    0.0574357   -8.00253
- 14487 │ ENSG00000096063  0.694155    0.930891     796.0     33.0      0.0     48.0    122.0     45.0      3.0     92.0  12906.0   0.625719     0.624925    0.141869     4.41053
- 14488 │ ENSG00000112053  0.725893    0.936777    9350.0    142.0      1.0    267.0    653.0    197.0      8.0    313.0   3114.0   0.557886     0.55754     0.0684782    8.14692   ⋯
- 14489 │ ENSG00000112062  0.306494    0.758129    4441.0    486.0      2.0     62.0    632.0    359.0      0.0    116.0   7947.0  -1.62723     -1.56018     0.0799616  -20.3502
-                                                                                                                                                                 14455 rows omitted,
- 14489×5 DataFrame                                                                                                                                                          [56/624]
-   Row │ Name             sample1  sample2  sample3  sample4
-       │ String           Int64    Int64    Int64    Int64
-───────┼─────────────────────────────────────────────────────
-     1 │ ENSG00000237683       50       61       39       56
-     2 │ ENSG00000187634        2        8        9        3
-     3 │ ENSG00000188976     3575     2794     4034     2675
-     4 │ ENSG00000187961       54       68       96       58
-     5 │ ENSG00000187583        8        8        0        3
-     6 │ ENSG00000187642        2        1        0        0
-     7 │ ENSG00000188290        0        1        1        0
-     8 │ ENSG00000187608     1525     1122     1247     1001
-     9 │ ENSG00000188157      670      575      763      710
-    10 │ ENSG00000237330        3        0        1        1
-    11 │ ENSG00000131591       96       67      130       77
-    12 │ ENSG00000162571       14       12       17       27
-    13 │ ENSG00000186891       22       11        3        6
-    14 │ ENSG00000186827        0        0        0        1
-    15 │ ENSG00000078808      263      234      224      217
-    16 │ ENSG00000176022      213      151      243      117
-    17 │ ENSG00000184163       10        1        5        9
-   ⋮   │        ⋮            ⋮        ⋮        ⋮        ⋮
- 14473 │ ENSG00000124678        0        0        0        6
- 14474 │ ENSG00000146197       17       21       56       28
- 14475 │ ENSG00000065029      467      509      716      577
- 14476 │ ENSG00000023892       90       41       63       38
- 14477 │ ENSG00000112033      107      130      154      157
- 14478 │ ENSG00000112039      458      294      367      327
- 14479 │ ENSG00000198755    18473    16069    16449    17279
- 14480 │ ENSG00000007866      427      331      403      406
- 14481 │ ENSG00000112041      177      104      112       55
- 14482 │ ENSG00000096060     1960     1702     2338     2220
- 14483 │ ENSG00000157343       13        2       23        5
- 14484 │ ENSG00000196748       37       33       20       14
- 14485 │ ENSG00000204140        7        1        2        0
- 14486 │ ENSG00000197753        8        0        0        4
- 14487 │ ENSG00000096063     4773     4264     4900     5910
- 14488 │ ENSG00000112053       28       12       15       18
- 14489 │ ENSG00000112062      668      444      437      519
-                                           14455 rows omitted, 14489×5 DataFrame                                                                                            [17/624]
-   Row │ Name             sample5  sample6  sample7  sample8
-       │ String           Int64    Int64    Int64    Int64
-───────┼─────────────────────────────────────────────────────
-     1 │ ENSG00000237683       41       35       49       42
-     2 │ ENSG00000187634        2        2       14        4
-     3 │ ENSG00000188976     3642     2605     6322     3396
-     4 │ ENSG00000187961       44       75       70       65
-     5 │ ENSG00000187583        0        1        6        2
-     6 │ ENSG00000187642        0        1        1        1
-     7 │ ENSG00000188290        0        1        0        0
-     8 │ ENSG00000187608      902      822     1420     1510
-     9 │ ENSG00000188157      481      486      389      425
-    10 │ ENSG00000237330        0        1        1        0
-    11 │ ENSG00000131591       56       54      185       82
-    12 │ ENSG00000162571       19       13       13       11
-    13 │ ENSG00000186891        1        3        0        0
-    14 │ ENSG00000186827        0        0        0        0
-    15 │ ENSG00000078808      175      194      400      263
-    16 │ ENSG00000176022      216      160      218      169
-    17 │ ENSG00000184163        6        3        5        3
-   ⋮   │        ⋮            ⋮        ⋮        ⋮        ⋮
- 14473 │ ENSG00000124678        2        5        0        0
- 14474 │ ENSG00000146197       31       23       63       31
- 14475 │ ENSG00000065029      473      497      987      815
- 14476 │ ENSG00000023892       35       26       41       51
- 14477 │ ENSG00000112033      166      129      344      218
- 14478 │ ENSG00000112039      247      330      220      275
- 14479 │ ENSG00000198755    16013    13645    17704    15002
- 14480 │ ENSG00000007866      328      317      213      255
- 14481 │ ENSG00000112041       48       39       46       47
- 14482 │ ENSG00000096060     1881     1846     2339     2580
- 14483 │ ENSG00000157343       23        9        4        9
- 14484 │ ENSG00000196748       21       10       39       28
- 14485 │ ENSG00000204140        0        0        0        0
- 14486 │ ENSG00000197753        0        1        2        1
- 14487 │ ENSG00000096063     4818     4539     5665     5646
- 14488 │ ENSG00000112053       21       17       11       19
- 14489 │ ENSG00000112062      384      407      423      474
-                                           14455 rows omitted)
+┌ Warning: seriestype density has been moved to StatsPlots.  To use: `Pkg.add("StatsPlots"); using StatsPlots`
+└ @ Plots ~/.julia/packages/Plots/PomtQ/src/args.jl:1576
+┌ Warning: seriestype density has been moved to StatsPlots.  To use: `Pkg.add("StatsPlots"); using StatsPlots`
+└ @ Plots ~/.julia/packages/Plots/PomtQ/src/args.jl:1576
+┌ Warning: seriestype density has been moved to StatsPlots.  To use: `Pkg.add("StatsPlots"); using StatsPlots`
+└ @ Plots ~/.julia/packages/Plots/PomtQ/src/args.jl:1576
+┌ Warning: seriestype density has been moved to StatsPlots.  To use: `Pkg.add("StatsPlots"); using StatsPlots`
+└ @ Plots ~/.julia/packages/Plots/PomtQ/src/args.jl:1576
+┌ Warning: seriestype density has been moved to StatsPlots.  To use: `Pkg.add("StatsPlots"); using StatsPlots`
+└ @ Plots ~/.julia/packages/Plots/PomtQ/src/args.jl:1576
+┌ Warning: seriestype density has been moved to StatsPlots.  To use: `Pkg.add("StatsPlots"); using StatsPlots`
+└ @ Plots ~/.julia/packages/Plots/PomtQ/src/args.jl:1576
+┌ Warning: seriestype density has been moved to StatsPlots.  To use: `Pkg.add("StatsPlots"); using StatsPlots`
+└ @ Plots ~/.julia/packages/Plots/PomtQ/src/args.jl:1576
+┌ Warning: seriestype density has been moved to StatsPlots.  To use: `Pkg.add("StatsPlots"); using StatsPlots`
+└ @ Plots ~/.julia/packages/Plots/PomtQ/src/args.jl:1576
+┌ Warning: seriestype density has been moved to StatsPlots.  To use: `Pkg.add("StatsPlots"); using StatsPlots`
+└ @ Plots ~/.julia/packages/Plots/PomtQ/src/args.jl:1576
+(19999×16 DataFrame
+   Row │ Name     pval         padj        n11      n12      n13      n21      n22      n23      n31      n32      n33      Δ1           Δ2          se         z1
+       │ String   Float64      Float64     Float64  Float64  Float64  Float64  Float64  Float64  Float64  Float64  Float64  Float64      Float64     Float64    Float64
+───────┼────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+     1 │ DE1      0.23566      0.716036     1532.0     75.0      0.0   1220.0  11010.0    602.0     16.0   2933.0   1674.0   1.91208      1.81954    0.0393608    48.5783
+     2 │ DE2      0.280118     0.761567     2277.0    288.0      0.0    965.0  11514.0    372.0     20.0   2615.0   1011.0   1.74141      1.70287    0.0405313    42.9647
+     3 │ DE3      0.0578546    0.359121     1576.0     37.0      0.0   1376.0   8716.0    293.0    113.0   5211.0   1740.0   3.05828      3.02011    0.0437133    69.9623
+     4 │ DE4      0.153297     0.592234     1540.0    139.0      0.0    754.0  11974.0    322.0      9.0   3679.0    645.0   2.30239      2.26752    0.043407     53.0419
+     5 │ DE5      0.0430984    0.306888     1165.0     12.0      0.0   1585.0   7478.0    346.0    147.0   5642.0   2687.0   3.26137      3.0313     0.0427847    76.2275
+     6 │ DE6      0.0548481    0.349222     1580.0     73.0      0.0    903.0   9189.0    248.0     40.0   5944.0   1085.0   3.09582      3.07328    0.0434157    71.3063
+     7 │ DE7      0.0106004    0.134858     2171.0     70.0      0.0   3630.0   8686.0     62.0    441.0   3662.0    340.0   4.1205       4.12182    0.0528643    77.9449
+     8 │ DE8      0.0370944    0.281633     1927.0     72.0      0.0   2153.0  10647.0    131.0     85.0   3551.0    496.0   3.36128      3.36226    0.0508749    66.0696
+     9 │ DE9      0.173617     0.628115     2215.0    225.0      0.0   2595.0  11717.0    268.0     38.0   1567.0    437.0   2.19387      2.1516     0.0432783    50.6921
+    10 │ DE10     0.023029     0.214612     1995.0     51.0      0.0   2157.0   9233.0    131.0    281.0   4392.0    822.0   3.66477      3.65884    0.0506881    72.3004
+    11 │ DE11     0.132087     0.551623     2284.0    198.0      0.0   1344.0  10775.0    241.0     53.0   3313.0    854.0   2.42806      2.38606    0.0438296    55.3976
+    12 │ DE12     0.155704     0.595284     1960.0     98.0      0.0   1404.0  10079.0    407.0     77.0   3313.0   1724.0   2.28899      2.26237    0.0419046    54.6238
+    13 │ DE13     0.997607     1.0          3440.0   2196.0      0.0   2368.0  10889.0    150.0      0.0     16.0      3.0  -0.00483563   0.0160646  0.0290808    -0.166282
+    14 │ DE14     0.976226     1.0          3819.0   2011.0      0.0   2164.0  10668.0    304.0      0.0     76.0     20.0  -0.0480485   -0.0329266  0.02964      -1.62107
+    15 │ DE15     0.268295     0.750247     3726.0    825.0      0.0   4814.0   9289.0     43.0      6.0    342.0     17.0   1.78485      1.78331    0.0345307    51.6889
+    16 │ DE16     0.247578     0.729206     4708.0    936.0      0.0   6111.0   7223.0     24.0      0.0     59.0      1.0   1.86427      1.86008    0.032363     57.605
+    17 │ DE17     0.893376     1.0          3733.0   1724.0      0.0   2064.0  11093.0    151.0      2.0    258.0     37.0   0.216108     0.215354   0.0310507     6.95985
+   ⋮   │    ⋮          ⋮           ⋮          ⋮        ⋮        ⋮        ⋮        ⋮        ⋮        ⋮        ⋮        ⋮          ⋮           ⋮           ⋮           ⋮
+ 19983 │ EE19984  0.13704      0.562648     2317.0   3248.0      3.0    271.0  12841.0    304.0      0.0     63.0     15.0  -2.3974      -2.3652     0.049886    -48.0574
+ 19984 │ EE19985  0.000124461  0.00702465   1888.0  10620.0     75.0     20.0   6117.0    336.0      0.0      7.0      0.0  -6.18682     -6.03975    0.0613408  -100.86
+ 19985 │ EE19986  0.792896     0.99321      1648.0    595.0      0.0    962.0  15728.0     71.0      0.0     53.0      5.0   0.423322     0.421096   0.0498556     8.49097
+ 19986 │ EE19987  0.935436     1.0          1544.0    431.0      0.0    954.0  15547.0    522.0      0.0     48.0     16.0  -0.130612     0.0501127  0.0452884    -2.88399
+ 19987 │ EE19988  0.140731     0.568163     1293.0    310.0      0.0    301.0  13220.0    216.0      0.0   3468.0    254.0   2.37509      1.96845    0.0451564    52.5971
+ 19988 │ EE19989  0.791037     0.993029     1793.0    508.0      0.0    745.0  15588.0    147.0      0.0    259.0     22.0   0.427213     0.426847   0.0502097     8.50858
+ 19989 │ EE19990  0.279433     0.760693     2139.0   3031.0      1.0    583.0  13088.0    210.0      0.0      7.0      3.0  -1.74389     -1.70321    0.0426572   -40.8816
+ 19990 │ EE19991  0.0162237    0.175099     1198.0     32.0      0.0   2061.0  12694.0     73.0     19.0   2880.0    105.0   3.87581      3.85404    0.0612602    63.268
+ 19991 │ EE19992  0.878264     1.0          1660.0   1077.0      0.0    331.0  15150.0    157.0      0.0    639.0     48.0  -0.246963    -0.24061    0.0429168    -5.75445
+ 19992 │ EE19993  0.00723039   0.106402     1349.0     62.0      0.0   2497.0  12949.0     13.0     43.0   2126.0     23.0   4.33081      4.13216    0.0682884    63.4194
+ 19993 │ EE19994  0.0963192    0.469264     1717.0    354.0      0.0   1137.0  13510.0     56.0      7.0   2215.0     66.0   2.68127      2.10509    0.0510656    52.5063
+ 19994 │ EE19995  0.0462352    0.31747      1838.0    216.0      0.0   1322.0  12574.0     58.0     24.0   2939.0     91.0   3.21378      2.75718    0.0534656    60.1093
+ 19995 │ EE19996  0.841601     0.99861      1102.0    277.0      0.0    439.0  16460.0    325.0      0.0    391.0     68.0   0.32222      0.32094    0.0535305     6.01937
+ 19996 │ EE19997  0.000170831  0.0086274    1249.0     25.0      0.0   2062.0   8500.0     10.0    228.0   6956.0     33.0   6.06022      5.61938    0.0648161    93.4988
+ 19997 │ EE19998  0.933772     1.0          1113.0    137.0      0.0    926.0  15564.0    966.0      0.0    227.0    129.0   0.133985     0.0443139  0.04216       3.17801
+ 19998 │ EE19999  0.344847     0.823375     1475.0    307.0      0.0   1756.0  15356.0    128.0      0.0     38.0      2.0   1.52307      1.41599    0.0525798    28.9668
+ 19999 │ EE20000  0.694484     0.980397     1571.0    315.0      0.0    979.0  15555.0    362.0      1.0    225.0     54.0   0.63329      0.577392   0.0481845    13.143
+                                                                                                                                                          19965 rows omitted, 19999×
+                                                                                                                                                          19965 rows omitted[39/914]
+6 DataFrame
+   Row │ Name     Sample1  Sample2  Sample3  Sample4  Sample5
+       │ String   Int64    Int64    Int64    Int64    Int64
+───────┼──────────────────────────────────────────────────────
+     1 │ DE1           10       53       18       84       18
+     2 │ DE2            5       22       59       11       33
+     3 │ DE3           62       39       18       19        8
+     4 │ DE4            6      116      131        3       49
+     5 │ DE5           28       31       27       58       16
+     6 │ DE6           91       81       26        3       29
+     7 │ DE7            8        4       18        4        5
+     8 │ DE8            3       31        5       32       11
+     9 │ DE9           12       19        3       15       10
+    10 │ DE10          31       16       11        8        5
+    11 │ DE11          14       45       29        5        8
+    12 │ DE12          34       25       25       15       11
+    13 │ DE13           8        8       20        8        0
+    14 │ DE14           9        1        7       18        7
+    15 │ DE15           4        2        0       11        5
+    16 │ DE16           0        3        5        4        0
+    17 │ DE17          14       14        7        9        0
+   ⋮   │    ⋮        ⋮        ⋮        ⋮        ⋮        ⋮
+ 19983 │ EE19984       76       95       11       49        0
+ 19984 │ EE19985        0      128       34      114      164
+ 19985 │ EE19986       36      144        0       58        0
+ 19986 │ EE19987      140       30        3       78        2
+ 19987 │ EE19988      246       58        0      143      177
+ 19988 │ EE19989      105       19      141        2        0
+ 19989 │ EE19990      187       20        9        8        0
+ 19990 │ EE19991        4       57       32        0       42
+ 19991 │ EE19992      173        2       29      216        0
+ 19992 │ EE19993      103        0        0       23        2
+ 19993 │ EE19994        6      176       36        0        1
+ 19994 │ EE19995        3      103        8        0       48
+ 19995 │ EE19996       60       27      405      132        0
+ 19996 │ EE19997       23        4        0        0      116
+ 19997 │ EE19998      172       28       31        2      128
+ 19998 │ EE19999      102       49        3        0        6
+ 19999 │ EE20000       96        2        2       27      112
+                                            19965 rows omitted, 19999×6 DataFrame
+   Row │ Name     Sample76  Sample77  Sample78  Sample79  Sample80
+       │ String   Int64     Int64     Int64     Int64     Int64
+───────┼───────────────────────────────────────────────────────────
+     1 │ DE1           200       180       176        26        24
+     2 │ DE2            26        37        36        40        79
+     3 │ DE3           157        81        89       220        97
+     4 │ DE4            15       205        63        75       228
+     5 │ DE5           505        92       119       157       261
+     6 │ DE6           191       131        99       147        68
+     7 │ DE7           116        38        34        58        64
+     8 │ DE8            53        39       183        22        73
+     9 │ DE9             8        95       111        21        16
+    10 │ DE10           53        69        63       130        83
+    11 │ DE11           37        45        55        58        48
+    12 │ DE12          155        78        63        48        45
+    13 │ DE13            0         3        71         0         1
+    14 │ DE14            0        26         7         3        10
+    15 │ DE15            4        31        28         7         2
+    16 │ DE16           48         0         1         7         4
+    17 │ DE17           23        10        10         6         1
+   ⋮   │    ⋮        ⋮         ⋮         ⋮         ⋮         ⋮
+ 19983 │ EE19984         0         4        43         8         2
+ 19984 │ EE19985         0         1         4         2         0
+ 19985 │ EE19986         6        83         0         0       262
+ 19986 │ EE19987        76         0       309        19         0
+ 19987 │ EE19988       261       221        47        11        86
+ 19988 │ EE19989       145       118         0        30        11
+ 19989 │ EE19990         0       102         0         0         2
+ 19990 │ EE19991         6       159        67       537       191
+ 19991 │ EE19992        14       135         2        13        43
+ 19992 │ EE19993       335       281         5        20       154
+ 19993 │ EE19994        88        15       192         9        35
+ 19994 │ EE19995       174        73        14        16        97
+ 19995 │ EE19996       138        61       407       182         0
+ 19996 │ EE19997       325        94       231       281        41
+ 19997 │ EE19998        24         0       116        43       656
+ 19998 │ EE19999         0       144         4       393         0
+ 19999 │ EE20000       294         0        26        98        18
+                                                 19965 rows omitted)
+
 
