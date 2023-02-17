@@ -30,9 +30,12 @@ include("$(joinpath(@__DIR__, "..", "code","plot.jl"))")
 Description on REOA and its usage
 
 This is a version of `Optimisers.setup`, and is the first step before using [`train!`](@ref Flux.train!).
+
 It differs from `Optimisers.setup` in that it:
+
 * has one extra check for mutability (since Flux expects to mutate the model in-place,
   while Optimisers.jl is designed to return an updated model)
+
 * has methods which accept Flux's old optimisers, and convert them.
   (The old `Flux.Optimise.Adam` and new `Optimisers.Adam` are distinct types.)
 
@@ -52,7 +55,7 @@ julia> opt  # mutated by Flux.train!
 #   If two genes have the same expression value,
 #   a random order is returned.
 function is_greater(x::Number, y::Number)
-	if abs(x - y) < 0.5
+	if abs(x - y) < 0.1
 		return rand(Bool)
 	else
 		return x > y
@@ -78,14 +81,18 @@ end
     sum_reo(c_size, t_size, c_sign, t_sign, c_count, t_count)
 
 Calculate the contribution of a REO of gene pair (a, b) to the 3x3 contigency table of gene a (not for gene b).
+
 Return, for gene a 
+```jldoctest
             Treatment
 	       a < b   a ~ b  a > b
 C	 a < b   n11    n12    n13
 t	 a ~ b   n21    n22    n23
 r	 a > b   n31    n32    n33
 l
+```
 Only one cell is 1 for which both row and column conditions are met;
+
 other cells are 0
 """
 function sum_reo(
@@ -172,18 +179,28 @@ end
 Peform the McCullagh's test on a square contigency table `mat`.
 
 McCullagh's test for a kxk contigency table;
+
 see Biometrika, 1977, 64(3), 449-453.
+
 Test case (Table 1 in p. 452) 
+
 Input
+```jldoctest
 mat = [43 8 3 0; 2 2 5 3; 1 0 7 2; 0 0 1 5]
+```
 Expected N matrix
+```jldoctest
 3×3 Matrix{Int64}:
  14   4  0
   4  12  3
   0   3  6
+```
 Expected R vector
+```jldoctest
 [11 11 5]'
+```
 Expected Δ1 = 1.45, Δ2 = 1.50, std. error = 0.53
+
 """
 function McCullagh_test(mat::Matrix{Int})
 	r, c = size(mat)
@@ -225,6 +242,7 @@ end
 	McNemar_Bowker_test(mat::Matrix{Int}; continuity_correction = true)
 
 Peform McNemar-Bowker's symmetry test for a square kxk contigency table;
+
 calculate P value with Chi-squared distribution
 """
 function McNemar_Bowker_test(mat::Matrix{Int};
@@ -251,6 +269,7 @@ end
     McNemar_test(n01::Int, n10::Int; continuity_correction = true)
 
 Peform McNemar's test for a 2x2 contigency table;
+
 calculate P value with Chi-squared distribution
 """
 function McNemar_test(n01::Int, n10::Int;
@@ -273,6 +292,7 @@ end
     McNemar_exact_test(n01::Int, n10::Int)
 
 Peform an exact McNemar's test for a 2x2 contigency table; 
+
 calculate P value with Binomial distribution
 """
 function McNemar_exact_test(n01::Int, n10::Int)
@@ -286,9 +306,12 @@ end
 
 """
 Perform differential expression analysis iteratively.
+
 Calculate P values for each gene, then add the non-DEGs to the reference list
 1) Calculate the pvals for each gene;
+
 2) Update the ref_gene list by removing the DEGs from the ref_gene list and place non-DEGs as ref_gene;
+
 3) If the number of ref_gene remains the same as the previous list, the iteration stops and returns. 
 """
 function identify_degs(df_ctrl,
@@ -337,33 +360,95 @@ end
 
 
 """
-REOA: Main function of RankCompV3, a differential expression analysis algorithm based on the REOs.
-Two input files, expression matrix (fn_expr) and meta data (fn_meta) are necessary.
-Each column in 'fn_expr' is a sample and each row is a gene and it must have a header.
-Gene column name should be 'Name'.
-e.g.
-----------------------------------------------------------------------
-Name                DRR053721   DRR053722   DRR053723   DRR053724 ...
-ENSG00000103257.9   117.022     121.91      119.221     116.148	...
-ENSG00000108231.13    0.129215    0.054743    0.137279    0.147513	...
-ENSG00000153201.16   15.8085     14.2613     15.9331     14.5369	...
-ENSG00000104731.14   37.8404     39.6529     39.6925     37.7323	...
-ENSG00000134769.21   30.3733     30.3242     30.1273     30.9788	...
-...
-----------------------------------------------------------------------
-Meta data 'fn_meta' has at least two columns, 'Name' and 'Group';
-Column 'Name' refers to the sample names (column header in 'fn_expr');
-Column 'Group' refers to the grouping information for each sample. 
-e.g.
-----------------------------------------------------------------------
-Name	Group
-DRR053721	Ctrl
-DRR053722	Ctrl
-DRR053723	Treat
-DRR053724	Treat
-...
-----------------------------------------------------------------------
-At present, the comparsion is performed between two groups only.
+    reoa(fn_expr::AbstractString = "fn_expr.txt",
+           fn_meta::AbstractString = "fn_meta.txt")
+
+RankCompV3 is a differential expression analysis algorithm based on relative expression ordering (REO) of gene pairs. It can be applied to bulk or single-cell RNA-sequencing (scRNA-seq) data, microarray gene expression profiles and proteomics profiles, etc. When applied in scRNA-seq data, it can run in single-cell mode or pseudo-bulk mode. The pseudo-bulk mode is expected to improve the accuracy while decreasing runntime and memory cost. 
+
+# Examples
+## Quick Start
+
+Run a test job with the input files distributed with the package.
+
+```jldoctest
+julia> using RankCompV3
+# Use the default values for the following other parameters. If you need to modify the parameters, add them directly.
+julia> result = reoa(use_testdata="yes")
+```
+
+The analysis results and a few plots will be generated and saved in the current work directory. They are also returned by the `reoa` function and can be captured by assign the returned values to a variable,  e.g., `result` in the above example.  
+
+The first return value is a DataFrame, where rows are genes and columns are statistical values for each gene. All the genes passing the basic preprocessing step are retained. 
+
+
+```jldoctest
+julia> result
+(19999×16 DataFrame
+   Row │ Name     pval         padj        n11      n12      n13      n21      n22      n23      n31      n32      n33      Δ1           Δ2          se         z1
+       │ String   Float64      Float64     Float64  Float64  Float64  Float64  Float64  Float64  Float64  Float64  Float64  Float64      Float64     Float64    Float64
+───────┼────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+     1 │ DE1      0.23566      0.716036     1532.0     75.0      0.0   1220.0  11010.0    602.0     16.0   2933.0   1674.0   1.91208      1.81954    0.0393608    48.5783
+     2 │ DE2      0.280118     0.761567     2277.0    288.0      0.0    965.0  11514.0    372.0     20.0   2615.0   1011.0   1.74141      1.70287    0.0405313    42.9647
+     3 │ DE3      0.0578546    0.359121     1576.0     37.0      0.0   1376.0   8716.0    293.0    113.0   5211.0   1740.0   3.05828      3.02011    0.0437133    69.9623
+   ⋮   │    ⋮          ⋮           ⋮          ⋮        ⋮        ⋮        ⋮        ⋮        ⋮        ⋮        ⋮        ⋮          ⋮           ⋮           ⋮           ⋮
+ 19998 │ EE19999  0.344847     0.823375     1475.0    307.0      0.0   1756.0  15356.0    128.0      0.0     38.0      2.0   1.52307      1.41599    0.0525798    28.9668
+ 19999 │ EE20000  0.694484     0.980397     1571.0    315.0      0.0    979.0  15555.0    362.0      1.0    225.0     54.0   0.63329      0.577392   0.0481845    13.143
+                                                                                                                                             19965 rows omitted, 19999×16
+```
+
+## Run your own DEG analysis
+
+You need to prepare two input files before the analysis: metadata file and expression matrix. Both of them should be saved in the `TSV` or 'CSV` format and they should be compatible with each other.   
+
+- **metadata file (required).**
+
+ The metadata file contains at least two columns. The first column is the sample names, and the second column is the grouping information. Only two groups are supported at present, therefore, do not include more than two groups. 
+
+ Column names for a metadata should be `Name` and `Group`. 
+
+ See an example metadata file, [fn_metadata.txt](https://github.com/yanjer/RankCompV3.jl/blob/master/test/fn_metadata.txt)
+
+
+- **expression matrix file (required).**
+
+ The first column is the gene name and the column header should be `Name` and the rest columns are profiles for each cell or each sample. Each column header should be the sample name which appears in the metadata file.
+
+ See an example expression matrix file, [fn_expr.txt](https://github.com/yanjer/RankCompV3.jl/blob/master/test/fn_expr.txt)
+
+Once the files are ready, you can carry out the DEG analysis with the default settings as follows. 
+
+```jldoctest
+julia> using RankCompV3
+# Use the default values for the following other parameters. If you want to modify the parameters, add them directly.
+julia> reoa("/public/yanj/data/fn_expr.txt",
+		"/public/yanj/data/fn_metadata.txt")
+```
+
+Other parameters can be set by passing the value to the corresponding keyword. 
+
+```jldoctest
+julia> reoa("/public/yanj/data/fn_expr.txt",
+    	"/public/yanj/data/fn_metadata.txt",
+    	expr_threshold = 0,
+    	min_profiles = 0,
+    	min_features = 0,
+    	pval_reo = 0.01,
+     	pval_deg = 1.00,
+     	padj_deg = 0.05,
+    	use_pseudobulk = 0,
+    	use_hk_genes = "yes"
+    	hk_file = "HK_genes_info.tsv",
+    	gene_name_type = "ENSEMBL",
+    	ref_gene_max = 3000,
+    	ref_gene_min = 100
+    	n_iter = 128,
+    	n_conv = 5,
+    	cell_drop_rate = 0,
+    	gene_drop_rate = 0,
+    	work_dir = "./",
+    	use_testdata = "no")
+```
+
 """
 function reoa(
 	 	   fn_expr::AbstractString = "fn_expr.txt",
