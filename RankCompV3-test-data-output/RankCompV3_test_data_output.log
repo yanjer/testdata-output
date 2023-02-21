@@ -9,16 +9,24 @@
 [ Info: Minimum size for significantly stable REO in the control group: 5
 [ Info: Minimum size for significantly stable REO in the treatment group: 5
 [ Info: INFO: Number of execution threads: 1
+....................
  47.591413 seconds (667.63 M allocations: 40.744 GiB, 19.52% gc time, 5.54% compilation time)
+[ Info: INFO: Iteration 0 is complete.
 [ Info: INFO: iteration 0,  # DEGs 886, # non-DEGs 19113
 [ Info: INFO: Number of execution threads: 1
+....................
 277.110699 seconds (4.21 G allocations: 259.835 GiB, 19.00% gc time)
+[ Info: INFO: Iteration 1 is complete.
 [ Info: INFO: iteration 1,  # DEGs 913, # non-DEGs 19086
 [ Info: INFO: Number of execution threads: 1
+....................
 277.760415 seconds (4.20 G allocations: 259.470 GiB, 19.13% gc time)
+[ Info: INFO: Iteration 2 is complete.
 [ Info: INFO: iteration 2,  # DEGs 936, # non-DEGs 19063
 [ Info: INFO: Number of execution threads: 1
+....................
 278.441807 seconds (4.20 G allocations: 259.157 GiB, 19.09% gc time)
+[ Info: INFO: Iteration 3 is complete.
 [ Info: INFO: iteration 3,  # DEGs 933, # non-DEGs 19066
 ┌ Warning: seriestype density has been moved to StatsPlots.  To use: `Pkg.add("StatsPlots"); using StatsPlots`
 └ @ Plots ~/.julia/packages/Plots/PomtQ/src/args.jl:1576
