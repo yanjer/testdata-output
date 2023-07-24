@@ -389,7 +389,7 @@ The first return value is a DataFrame, where rows are genes and columns are stat
 ```jldoctest
 julia> result
 (19999×16 DataFrame
-   Row │ Name     pval         padj        n11      n12      n13      n21      n22      n23      n31      n32      n33      Δ1           Δ2          se         z1
+   Row │ Name     pval         padj        n11      n21      n31      n12      n22      n32      n13      n23      n33      Δ1           Δ2          se         z1
        │ String   Float64      Float64     Float64  Float64  Float64  Float64  Float64  Float64  Float64  Float64  Float64  Float64      Float64     Float64    Float64
 ───────┼────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
      1 │ DE1      0.23566      0.716036     1532.0     75.0      0.0   1220.0  11010.0    602.0     16.0   2933.0   1674.0   1.91208      1.81954    0.0393608    48.5783
@@ -502,14 +502,14 @@ function reoa(
 		throw(ArgumentError("Meta data file, $fn_meta, does not fit with the expression file, $fn_expr. Some sample names in the meta are not found in the column names of the expression matrix"))
 	end
 	meta.Group = categorical(meta.Group)
-	mg         = length(levels(meta.Group))
+	mg         = length(unique(meta.Group))
 	if mg < 2
 		throw(ArgumentError("Meta data file, $fn_meta has only 0 or 1 group. It must consist of two 'Group' levels"))
 	end
 	if mg > 2
-		@info "WARN: Meta data have more than 2 group levels. The comparsion is only performed between the first two: $(levels(meta.Group)[1:2])"
+		@info "WARN: Meta data have more than 2 group levels. The comparsion is only performed between the first two: $(unique(meta.Group)[1:2])"
 	end
-	g_ctrl, g_treat = levels(meta.Group)[1:2]
+	g_ctrl, g_treat = unique(meta.Group)[1:2]
 	names_ctrl      = meta.Name[meta.Group .== g_ctrl ] # Sample names for 'ctrl' group
 	names_treat     = meta.Name[meta.Group .== g_treat] # Sample names for 'treat' group
 	@info "INFO: Comparsion is peformed between $g_ctrl and $g_treat"
@@ -601,11 +601,11 @@ function reoa(
         )
 	# Beautify output
 	# McCullagh_test result header
-	header = [:pval, :padj, :n11, :n12, :n13, :n21, :n22, :n23, :n31, :n32, :n33, :Δ1, :Δ2, :se, :z1]
+	header = [:pval, :padj, :n11, :n21, :n31, :n12, :n22, :n32, :n13, :n23, :n33, :Δ1, :Δ2, :se, :z1]
 	# # McNemar's exact test
-	# header = [:pval, :padj, :n11, :n12, :n13, :n21, :n22, :n23, :n31, :n32, :n33, :N, :n]
+	# header = [:pval, :padj, :n11, :n21, :n31, :n12, :n22, :n32, :n13, :n23, :n33, :N, :n]
 	# # other tests
-	# header = [:pval, :padj, :n11, :n12, :n13, :n21, :n22, :n23, :n31, :n32, :n33, :stat]
+	# header = [:pval, :padj, :n11, :n21, :n31, :n12, :n22, :n32, :n13, :n23, :n33, :stat]
 	result = DataFrame(result, header)
 	result[:, 3:11] = Int64.(result[:, 3:11])
 	insertcols!(result,   1, :Name => gene_names)

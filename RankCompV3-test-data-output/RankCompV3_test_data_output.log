@@ -1,194 +1,44 @@
-[ Info: INFO: Comparsion is peformed between group1 and group2
-[ Info: INFO: size of the loaded expression matrix for the two groups, 20000 x 5 vs 5
-[ Info: INFO: size after filtering lowly expressed genes and profiles and pseudo-bulk sampling, (19999, 5) vs. (19999, 5)
+[ Info: INFO: According to the meta information, there are 2 groups of data and each group will be analyzed with the rest of the sample.
+[ Info: INFO: size after filtering lowly expressed genes and profiles and pseudo-bulk sampling, (19999, 10)
 [ Info: WARN: only 0 house-keeping genes are available, we just ignore this.
 [ Info: WARN: even if all samples have the identical REOs, it still cannot reach the required significance, 0.01.
-[ Info:       The max significance level is 0.0625.
+[ Info:       The max significance level is 0.06249999999999998.
 [ Info: WARN: even if all samples have the identical REOs, it still cannot reach the required significance, 0.01.
-[ Info:       The max significance level is 0.0625.
-[ Info: Minimum size for significantly stable REO in the control group: 5
-[ Info: Minimum size for significantly stable REO in the treatment group: 5
-[ Info: INFO: Number of execution threads: 1
-....................
- 47.591413 seconds (667.63 M allocations: 40.744 GiB, 19.52% gc time, 5.54% compilation time)
-[ Info: INFO: Iteration 0 is complete.
-[ Info: INFO: iteration 0,  # DEGs 886, # non-DEGs 19113
-[ Info: INFO: Number of execution threads: 1
-....................
-277.110699 seconds (4.21 G allocations: 259.835 GiB, 19.00% gc time)
-[ Info: INFO: Iteration 1 is complete.
-[ Info: INFO: iteration 1,  # DEGs 913, # non-DEGs 19086
-[ Info: INFO: Number of execution threads: 1
-....................
-277.760415 seconds (4.20 G allocations: 259.470 GiB, 19.13% gc time)
-[ Info: INFO: Iteration 2 is complete.
-[ Info: INFO: iteration 2,  # DEGs 936, # non-DEGs 19063
-[ Info: INFO: Number of execution threads: 1
-....................
-278.441807 seconds (4.20 G allocations: 259.157 GiB, 19.09% gc time)
-[ Info: INFO: Iteration 3 is complete.
-[ Info: INFO: iteration 3,  # DEGs 933, # non-DEGs 19066
-┌ Warning: seriestype density has been moved to StatsPlots.  To use: `Pkg.add("StatsPlots"); using StatsPlots`
-└ @ Plots ~/.julia/packages/Plots/PomtQ/src/args.jl:1576
-┌ Warning: seriestype density has been moved to StatsPlots.  To use: `Pkg.add("StatsPlots"); using StatsPlots`
-└ @ Plots ~/.julia/packages/Plots/PomtQ/src/args.jl:1576
-┌ Warning: seriestype density has been moved to StatsPlots.  To use: `Pkg.add("StatsPlots"); using StatsPlots`
-└ @ Plots ~/.julia/packages/Plots/PomtQ/src/args.jl:1576
-┌ Warning: seriestype density has been moved to StatsPlots.  To use: `Pkg.add("StatsPlots"); using StatsPlots`
-└ @ Plots ~/.julia/packages/Plots/PomtQ/src/args.jl:1576
-┌ Warning: seriestype density has been moved to StatsPlots.  To use: `Pkg.add("StatsPlots"); using StatsPlots`
-└ @ Plots ~/.julia/packages/Plots/PomtQ/src/args.jl:1576
-┌ Warning: seriestype density has been moved to StatsPlots.  To use: `Pkg.add("StatsPlots"); using StatsPlots`
-└ @ Plots ~/.julia/packages/Plots/PomtQ/src/args.jl:1576
-┌ Warning: seriestype density has been moved to StatsPlots.  To use: `Pkg.add("StatsPlots"); using StatsPlots`
-└ @ Plots ~/.julia/packages/Plots/PomtQ/src/args.jl:1576
-┌ Warning: seriestype density has been moved to StatsPlots.  To use: `Pkg.add("StatsPlots"); using StatsPlots`
-└ @ Plots ~/.julia/packages/Plots/PomtQ/src/args.jl:1576
-┌ Warning: seriestype density has been moved to StatsPlots.  To use: `Pkg.add("StatsPlots"); using StatsPlots`
-└ @ Plots ~/.julia/packages/Plots/PomtQ/src/args.jl:1576
-┌ Warning: seriestype density has been moved to StatsPlots.  To use: `Pkg.add("StatsPlots"); using StatsPlots`
-└ @ Plots ~/.julia/packages/Plots/PomtQ/src/args.jl:1576
-┌ Warning: seriestype density has been moved to StatsPlots.  To use: `Pkg.add("StatsPlots"); using StatsPlots`
-└ @ Plots ~/.julia/packages/Plots/PomtQ/src/args.jl:1576
-┌ Warning: seriestype density has been moved to StatsPlots.  To use: `Pkg.add("StatsPlots"); using StatsPlots`
-└ @ Plots ~/.julia/packages/Plots/PomtQ/src/args.jl:1576
-┌ Warning: seriestype density has been moved to StatsPlots.  To use: `Pkg.add("StatsPlots"); using StatsPlots`
-└ @ Plots ~/.julia/packages/Plots/PomtQ/src/args.jl:1576
-┌ Warning: seriestype density has been moved to StatsPlots.  To use: `Pkg.add("StatsPlots"); using StatsPlots`
-└ @ Plots ~/.julia/packages/Plots/PomtQ/src/args.jl:1576
-┌ Warning: seriestype density has been moved to StatsPlots.  To use: `Pkg.add("StatsPlots"); using StatsPlots`
-└ @ Plots ~/.julia/packages/Plots/PomtQ/src/args.jl:1576
-┌ Warning: seriestype density has been moved to StatsPlots.  To use: `Pkg.add("StatsPlots"); using StatsPlots`
-└ @ Plots ~/.julia/packages/Plots/PomtQ/src/args.jl:1576
-┌ Warning: seriestype density has been moved to StatsPlots.  To use: `Pkg.add("StatsPlots"); using StatsPlots`
-└ @ Plots ~/.julia/packages/Plots/PomtQ/src/args.jl:1576
-┌ Warning: seriestype density has been moved to StatsPlots.  To use: `Pkg.add("StatsPlots"); using StatsPlots`
-└ @ Plots ~/.julia/packages/Plots/PomtQ/src/args.jl:1576
-┌ Warning: seriestype density has been moved to StatsPlots.  To use: `Pkg.add("StatsPlots"); using StatsPlots`
-└ @ Plots ~/.julia/packages/Plots/PomtQ/src/args.jl:1576
-┌ Warning: seriestype density has been moved to StatsPlots.  To use: `Pkg.add("StatsPlots"); using StatsPlots`
-└ @ Plots ~/.julia/packages/Plots/PomtQ/src/args.jl:1576
-┌ Warning: seriestype density has been moved to StatsPlots.  To use: `Pkg.add("StatsPlots"); using StatsPlots`
-└ @ Plots ~/.julia/packages/Plots/PomtQ/src/args.jl:1576
-(19999×16 DataFrame
-   Row │ Name     pval         padj        n11      n12      n13      n21      n22      n23      n31      n32      n33      Δ1           Δ2          se         z1
-       │ String   Float64      Float64     Float64  Float64  Float64  Float64  Float64  Float64  Float64  Float64  Float64  Float64      Float64     Float64    Float64
-───────┼────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
-     1 │ DE1      0.23566      0.716036     1532.0     75.0      0.0   1220.0  11010.0    602.0     16.0   2933.0   1674.0   1.91208      1.81954    0.0393608    48.5783
-     2 │ DE2      0.280118     0.761567     2277.0    288.0      0.0    965.0  11514.0    372.0     20.0   2615.0   1011.0   1.74141      1.70287    0.0405313    42.9647
-     3 │ DE3      0.0578546    0.359121     1576.0     37.0      0.0   1376.0   8716.0    293.0    113.0   5211.0   1740.0   3.05828      3.02011    0.0437133    69.9623
-     4 │ DE4      0.153297     0.592234     1540.0    139.0      0.0    754.0  11974.0    322.0      9.0   3679.0    645.0   2.30239      2.26752    0.043407     53.0419
-     5 │ DE5      0.0430984    0.306888     1165.0     12.0      0.0   1585.0   7478.0    346.0    147.0   5642.0   2687.0   3.26137      3.0313     0.0427847    76.2275
-     6 │ DE6      0.0548481    0.349222     1580.0     73.0      0.0    903.0   9189.0    248.0     40.0   5944.0   1085.0   3.09582      3.07328    0.0434157    71.3063
-     7 │ DE7      0.0106004    0.134858     2171.0     70.0      0.0   3630.0   8686.0     62.0    441.0   3662.0    340.0   4.1205       4.12182    0.0528643    77.9449
-     8 │ DE8      0.0370944    0.281633     1927.0     72.0      0.0   2153.0  10647.0    131.0     85.0   3551.0    496.0   3.36128      3.36226    0.0508749    66.0696
-     9 │ DE9      0.173617     0.628115     2215.0    225.0      0.0   2595.0  11717.0    268.0     38.0   1567.0    437.0   2.19387      2.1516     0.0432783    50.6921
-    10 │ DE10     0.023029     0.214612     1995.0     51.0      0.0   2157.0   9233.0    131.0    281.0   4392.0    822.0   3.66477      3.65884    0.0506881    72.3004
-    11 │ DE11     0.132087     0.551623     2284.0    198.0      0.0   1344.0  10775.0    241.0     53.0   3313.0    854.0   2.42806      2.38606    0.0438296    55.3976
-    12 │ DE12     0.155704     0.595284     1960.0     98.0      0.0   1404.0  10079.0    407.0     77.0   3313.0   1724.0   2.28899      2.26237    0.0419046    54.6238
-    13 │ DE13     0.997607     1.0          3440.0   2196.0      0.0   2368.0  10889.0    150.0      0.0     16.0      3.0  -0.00483563   0.0160646  0.0290808    -0.166282
-    14 │ DE14     0.976226     1.0          3819.0   2011.0      0.0   2164.0  10668.0    304.0      0.0     76.0     20.0  -0.0480485   -0.0329266  0.02964      -1.62107
-    15 │ DE15     0.268295     0.750247     3726.0    825.0      0.0   4814.0   9289.0     43.0      6.0    342.0     17.0   1.78485      1.78331    0.0345307    51.6889
-    16 │ DE16     0.247578     0.729206     4708.0    936.0      0.0   6111.0   7223.0     24.0      0.0     59.0      1.0   1.86427      1.86008    0.032363     57.605
-    17 │ DE17     0.893376     1.0          3733.0   1724.0      0.0   2064.0  11093.0    151.0      2.0    258.0     37.0   0.216108     0.215354   0.0310507     6.95985
-   ⋮   │    ⋮          ⋮           ⋮          ⋮        ⋮        ⋮        ⋮        ⋮        ⋮        ⋮        ⋮        ⋮          ⋮           ⋮           ⋮           ⋮
- 19983 │ EE19984  0.13704      0.562648     2317.0   3248.0      3.0    271.0  12841.0    304.0      0.0     63.0     15.0  -2.3974      -2.3652     0.049886    -48.0574
- 19984 │ EE19985  0.000124461  0.00702465   1888.0  10620.0     75.0     20.0   6117.0    336.0      0.0      7.0      0.0  -6.18682     -6.03975    0.0613408  -100.86
- 19985 │ EE19986  0.792896     0.99321      1648.0    595.0      0.0    962.0  15728.0     71.0      0.0     53.0      5.0   0.423322     0.421096   0.0498556     8.49097
- 19986 │ EE19987  0.935436     1.0          1544.0    431.0      0.0    954.0  15547.0    522.0      0.0     48.0     16.0  -0.130612     0.0501127  0.0452884    -2.88399
- 19987 │ EE19988  0.140731     0.568163     1293.0    310.0      0.0    301.0  13220.0    216.0      0.0   3468.0    254.0   2.37509      1.96845    0.0451564    52.5971
- 19988 │ EE19989  0.791037     0.993029     1793.0    508.0      0.0    745.0  15588.0    147.0      0.0    259.0     22.0   0.427213     0.426847   0.0502097     8.50858
- 19989 │ EE19990  0.279433     0.760693     2139.0   3031.0      1.0    583.0  13088.0    210.0      0.0      7.0      3.0  -1.74389     -1.70321    0.0426572   -40.8816
- 19990 │ EE19991  0.0162237    0.175099     1198.0     32.0      0.0   2061.0  12694.0     73.0     19.0   2880.0    105.0   3.87581      3.85404    0.0612602    63.268
- 19991 │ EE19992  0.878264     1.0          1660.0   1077.0      0.0    331.0  15150.0    157.0      0.0    639.0     48.0  -0.246963    -0.24061    0.0429168    -5.75445
- 19992 │ EE19993  0.00723039   0.106402     1349.0     62.0      0.0   2497.0  12949.0     13.0     43.0   2126.0     23.0   4.33081      4.13216    0.0682884    63.4194
- 19993 │ EE19994  0.0963192    0.469264     1717.0    354.0      0.0   1137.0  13510.0     56.0      7.0   2215.0     66.0   2.68127      2.10509    0.0510656    52.5063
- 19994 │ EE19995  0.0462352    0.31747      1838.0    216.0      0.0   1322.0  12574.0     58.0     24.0   2939.0     91.0   3.21378      2.75718    0.0534656    60.1093
- 19995 │ EE19996  0.841601     0.99861      1102.0    277.0      0.0    439.0  16460.0    325.0      0.0    391.0     68.0   0.32222      0.32094    0.0535305     6.01937
- 19996 │ EE19997  0.000170831  0.0086274    1249.0     25.0      0.0   2062.0   8500.0     10.0    228.0   6956.0     33.0   6.06022      5.61938    0.0648161    93.4988
- 19997 │ EE19998  0.933772     1.0          1113.0    137.0      0.0    926.0  15564.0    966.0      0.0    227.0    129.0   0.133985     0.0443139  0.04216       3.17801
- 19998 │ EE19999  0.344847     0.823375     1475.0    307.0      0.0   1756.0  15356.0    128.0      0.0     38.0      2.0   1.52307      1.41599    0.0525798    28.9668
- 19999 │ EE20000  0.694484     0.980397     1571.0    315.0      0.0    979.0  15555.0    362.0      1.0    225.0     54.0   0.63329      0.577392   0.0481845    13.143
-                                                                                                                                                          19965 rows omitted, 19999×
-                                                                                                                                                          19965 rows omitted[39/914]
-6 DataFrame
-   Row │ Name     Sample1  Sample2  Sample3  Sample4  Sample5
-       │ String   Int64    Int64    Int64    Int64    Int64
-───────┼──────────────────────────────────────────────────────
-     1 │ DE1           10       53       18       84       18
-     2 │ DE2            5       22       59       11       33
-     3 │ DE3           62       39       18       19        8
-     4 │ DE4            6      116      131        3       49
-     5 │ DE5           28       31       27       58       16
-     6 │ DE6           91       81       26        3       29
-     7 │ DE7            8        4       18        4        5
-     8 │ DE8            3       31        5       32       11
-     9 │ DE9           12       19        3       15       10
-    10 │ DE10          31       16       11        8        5
-    11 │ DE11          14       45       29        5        8
-    12 │ DE12          34       25       25       15       11
-    13 │ DE13           8        8       20        8        0
-    14 │ DE14           9        1        7       18        7
-    15 │ DE15           4        2        0       11        5
-    16 │ DE16           0        3        5        4        0
-    17 │ DE17          14       14        7        9        0
-   ⋮   │    ⋮        ⋮        ⋮        ⋮        ⋮        ⋮
- 19983 │ EE19984       76       95       11       49        0
- 19984 │ EE19985        0      128       34      114      164
- 19985 │ EE19986       36      144        0       58        0
- 19986 │ EE19987      140       30        3       78        2
- 19987 │ EE19988      246       58        0      143      177
- 19988 │ EE19989      105       19      141        2        0
- 19989 │ EE19990      187       20        9        8        0
- 19990 │ EE19991        4       57       32        0       42
- 19991 │ EE19992      173        2       29      216        0
- 19992 │ EE19993      103        0        0       23        2
- 19993 │ EE19994        6      176       36        0        1
- 19994 │ EE19995        3      103        8        0       48
- 19995 │ EE19996       60       27      405      132        0
- 19996 │ EE19997       23        4        0        0      116
- 19997 │ EE19998      172       28       31        2      128
- 19998 │ EE19999      102       49        3        0        6
- 19999 │ EE20000       96        2        2       27      112
-                                            19965 rows omitted, 19999×6 DataFrame
-   Row │ Name     Sample76  Sample77  Sample78  Sample79  Sample80
-       │ String   Int64     Int64     Int64     Int64     Int64
-───────┼───────────────────────────────────────────────────────────
-     1 │ DE1           200       180       176        26        24
-     2 │ DE2            26        37        36        40        79
-     3 │ DE3           157        81        89       220        97
-     4 │ DE4            15       205        63        75       228
-     5 │ DE5           505        92       119       157       261
-     6 │ DE6           191       131        99       147        68
-     7 │ DE7           116        38        34        58        64
-     8 │ DE8            53        39       183        22        73
-     9 │ DE9             8        95       111        21        16
-    10 │ DE10           53        69        63       130        83
-    11 │ DE11           37        45        55        58        48
-    12 │ DE12          155        78        63        48        45
-    13 │ DE13            0         3        71         0         1
-    14 │ DE14            0        26         7         3        10
-    15 │ DE15            4        31        28         7         2
-    16 │ DE16           48         0         1         7         4
-    17 │ DE17           23        10        10         6         1
-   ⋮   │    ⋮        ⋮         ⋮         ⋮         ⋮         ⋮
- 19983 │ EE19984         0         4        43         8         2
- 19984 │ EE19985         0         1         4         2         0
- 19985 │ EE19986         6        83         0         0       262
- 19986 │ EE19987        76         0       309        19         0
- 19987 │ EE19988       261       221        47        11        86
- 19988 │ EE19989       145       118         0        30        11
- 19989 │ EE19990         0       102         0         0         2
- 19990 │ EE19991         6       159        67       537       191
- 19991 │ EE19992        14       135         2        13        43
- 19992 │ EE19993       335       281         5        20       154
- 19993 │ EE19994        88        15       192         9        35
- 19994 │ EE19995       174        73        14        16        97
- 19995 │ EE19996       138        61       407       182         0
- 19996 │ EE19997       325        94       231       281        41
- 19997 │ EE19998        24         0       116        43       656
- 19998 │ EE19999         0       144         4       393         0
- 19999 │ EE20000       294         0        26        98        18
-                                                 19965 rows omitted)
-
-
+[ Info:       The max significance level is 0.06249999999999998.
+[ Info: WARN: even if all samples have the identical REOs, it still cannot reach the required significance, 0.01.
+[ Info:       The max significance level is 0.06249999999999998.
+[ Info: WARN: even if all samples have the identical REOs, it still cannot reach the required significance, 0.01.
+[ Info:       The max significance level is 0.06249999999999998.
+[ Info: INFO: Number of execution threads: 20
+[ Info: INFO: Start constructing REO table
+.......................................................................................................................................................................................................┌ Info: 
+└ INFO: Start identifying DEGs
+...................
+[ Info: INFO: iteration 0,  # DEGs 837, # non-DEGs 19162
+...................
+[ Info: INFO: iteration 1,  # DEGs 909, # non-DEGs 19090
+...................
+[ Info: INFO: iteration 2,  # DEGs 921, # non-DEGs 19078
+...................
+[ Info: INFO: iteration 3,  # DEGs 923, # non-DEGs 19076
+[ Info: INFO: Convergence threshold is reached
+[ Info: INFO: The results of differentially expressed genes in the iteration process of group1 vs group2 were output.
+ 97.943634 seconds (2.02 G allocations: 149.557 GiB, 71.21% gc time, 5.84% compilation time)
+[ Info: INFO: The expression profile and metadata file after pseudobulk are fn_expr_df_expr.tsv and fn_expr_df_meta.tsv
+19999×2 DataFrame
+   Row │ gene_name  group1_vs_group2
+       │ Any        Any
+───────┼─────────────────────────────
+     1 │ DE1        up
+     2 │ DE2        up
+     3 │ DE3        up
+     4 │ DE4        up
+     5 │ DE5        up
+     6 │ DE6        up
+   ⋮   │     ⋮             ⋮
+ 19995 │ EE19996    up
+ 19996 │ EE19997    up
+ 19997 │ EE19998    up
+ 19998 │ EE19999    up
+ 19999 │ EE20000    up
+                   19988 rows omitted
