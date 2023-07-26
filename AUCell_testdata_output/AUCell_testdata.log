@@ -1,0 +1,12 @@
+  1.595452 seconds (8.44 M allocations: 279.644 MiB, 4.83% gc time, 77.52% compilation time)
+[ Info: INFO: The size of expression profile was (36602, 8).
+  1.945127 seconds (4.95 M allocations: 260.557 MiB, 11.17% gc time, 96.92% compilation time)
+[ Info: INFO: The filtered of expression profile size was (7549, 8).
+  0.000401 seconds (27 allocations: 34.641 KiB)
+[ Info: INFO: There are 1 pathways to be analyzed.
+  0.660084 seconds (1.75 M allocations: 87.597 MiB, 3.11% gc time, 99.78% compilation time)
+[ Info: INFO: According to the meta information, there are 2 groups of data and each group will be analyzed with the rest of the sample.
+  2.731819 seconds (6.61 M allocations: 365.662 MiB, 3.77% gc time, 94.64% compilation time)
+2×17 Matrix{Any}:
+ "GeneSet"                            "group1"   "group1"   "group1"   "group1"   "group1"  …   "group2"   "group2"   "group2"   "group2"   "group2"   "group2"   "group2"   "group2"
+ "HALLMARK_TNFA_SIGNALING_VIA_NFKB"  0.506962   0.500821   0.515332   0.529347   0.453294      0.506962   0.500821   0.515332   0.529347   0.453294   0.512858   0.482078   0.440029
